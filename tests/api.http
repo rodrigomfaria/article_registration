@@ -1,0 +1,43 @@
+### Teste: Listar artigos
+GET http://localhost:8000/api/v1/articles
+
+### Teste: Criar artigo
+POST http://localhost:8000/api/v1/articles
+Content-Type: application/json
+
+{
+  "title": "Exemplo de Artigo",
+  "content": "Conteúdo do artigo de exemplo.",
+  "author_id": 1
+}
+
+### Teste: Listar usuários
+GET http://localhost:8000/api/v1/users
+
+### Teste: Criar usuário
+POST http://localhost:8000/api/v1/users/signup
+Content-Type: application/json
+
+{
+  "name": "usuario_teste",
+  "last_name": "teste",
+  "email": "teste@example.com",
+  "password": "123456"
+}
+
+### Teste: Buscar usuário por ID
+GET http://localhost:8000/api/v1/users/1
+
+### Teste: Atualizar usuário
+PUT http://localhost:8000/api/v1/users/1
+Content-Type: application/json
+
+{
+  "name": "usuario_atualizado",
+  "last_name": "atualizado",
+  "email": "atualizado@example.com",
+  "password": "nova_senha"
+}
+
+### Teste: Deletar usuário
+DELETE http://localhost:8000/api/v1/users/1
